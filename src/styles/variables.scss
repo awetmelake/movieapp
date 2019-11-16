@@ -1,0 +1,17 @@
+$header:#6441a4;
+$bgColor: #0f0e11;
+
+$primaryColor: #e1ecf9;
+$secondaryColor: #609ce1;
+$tertiaryColor: #133863;
+
+$textColor: black;
+$redBtn: #ff0000;
+
+$greenBtn: #00cc33;
+
+@mixin flex-align-justify($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}

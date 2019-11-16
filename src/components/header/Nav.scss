@@ -1,0 +1,174 @@
+@import "../../styles/variables.scss";
+
+.main-nav {
+  @include flex-align-justify(center, space-evenly);
+  height: 60px;
+  background-color: $header;
+  color: #f3f3f3;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  transition: position 0.5s;
+  border-bottom: 1px solid grey;
+
+  header {
+    font-size: 20px;
+    a {
+      padding: 0.6em;
+    }
+  }
+
+  ul {
+    @include flex-align-justify(center, space-evenly);
+
+    li {
+      cursor: pointer;
+      color: white;
+      transition: color 0.5s;
+      width: fit-content;
+      &:hover{
+        border-bottom: 3px solid purple;
+      }
+
+      a {
+        display: inline-block;
+        padding: 1em;
+      }
+
+      &:hover {
+        // color: $secondaryColor;
+      }
+    }
+  }
+
+  .icon {
+    min-width: 40px;
+    width: 40px;
+  }
+
+  &-user-icon {
+    width: fit-content;
+    border-radius: 200px;
+    background-color: $primaryColor;
+    font-size: 1.2em;
+    transition: transform 0.25s;
+    color: black !important;
+    font-weight: 500;
+
+    a {
+      padding: 8px 16px 10px !important;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      transition: transform 0.5s;
+    }
+  }
+
+  .movie-icon {
+    float: left;
+    margin-right: 1em;
+    position:relative;
+    bottom: 5px;
+  }
+
+  .home-icon {
+    position: fixed;
+    top: -10px;
+    left: -60px;
+  }
+
+  .show-nav-icon {
+    transition: right 0.5s;
+    height: 60px;
+    position: fixed;
+    top: -10px;
+    right: -50px;
+  }
+
+  .close-nav-icon {
+    transition: right 0.5s;
+    height: 60px;
+    padding-left: 0px;
+    position: fixed;
+    top: -10px;
+    right: -60px;
+  }
+
+  .nav-bottom-section {
+    transition: bottom 0.5s;
+    position: fixed;
+    bottom: -60px;
+    height: 60px;
+    width: 100%;
+
+    ul,
+    li {
+      display: none;
+    }
+  }
+}
+
+//change nav to mobile view
+@media screen and (max-width: 900px) {
+  .main-nav {
+    width: 100%;
+    transition: top 0.5s;
+    header,
+    li,
+    ul {
+      display: none;
+      width: 0;
+      padding: 0;
+    }
+
+    &-show {
+      top: 0;
+      .close-nav-icon {
+        top: 0px;
+        right: 0px;
+      }
+      .home-icon {
+        transition: left 0.5s;
+        top: 15px;
+        left: 10px;
+      }
+      .show-nav-icon {
+        top: -60px;
+      }
+    }
+
+    &-hide {
+      position: absolute;
+      top: -60px;
+
+      .show-nav-icon {
+        top: -10px;
+        right: 0;
+      }
+    }
+
+    .nav-bottom-section {
+      background-color: $header;
+
+      &-show {
+        bottom: 0px;
+      }
+
+      ul {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      li {
+        margin: auto;
+        display: initial;
+      }
+    }
+  }
+}

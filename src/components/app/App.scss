@@ -1,0 +1,54 @@
+@import "../../styles/variables.scss";
+
+html,
+body {
+  background-color: $bgColor;
+  padding: 0;
+  margin: 0;
+}
+
+.App {
+  font-family: "Roboto Condensed";
+  color: $textColor;
+  a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  h1{
+    margin-top: .5em !important;
+    font-size: 200% !important;
+  }
+
+  button,
+  .btn {
+    cursor: pointer;
+    padding: 0.6em;
+    color: white;
+    border: none;
+    opacity: 0.8;
+    transition: opacity 0.5s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  li {
+    list-style: none;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  h1 {
+    text-align: center;
+    clear: both;
+  }
+}
+
+@media (min-width: 900px) {
+  .App {
+    padding-top: 60px;
+    // padding-bottom: 60px;
+  }
+}

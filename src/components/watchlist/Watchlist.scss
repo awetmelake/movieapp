@@ -1,0 +1,52 @@
+@import "../../styles/variables.scss";
+.watch-list {
+  width: 90%;
+  margin: 0 auto;
+  h1 {
+    color: #f3f3f3;
+    text-align: center;
+    margin: 0 auto 50px;
+    padding-top: 50px;
+  }
+  h3 {
+    font-size: 1.7em;
+    color: #f3f3f3;
+    text-align: left;
+  }
+  hr {
+    opacity: 0.5;
+  }
+
+  &-section-title {
+    font-family: "roboto Condensed";
+  }
+  &-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 180px);
+    grid-row-gap: 2em;
+    grid-column-gap: 2em;
+    margin: 50px auto 0;
+  }
+}
+.watch-list-movie-poster {
+  cursor: pointer;
+  padding: 1em;
+  background-color: $primaryColor;
+  border-radius: 5px;
+  transition: all 0.5s;
+  img {
+    width: 100%;
+  }
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 20px black;
+  }
+}
+
+@media (max-width: 600px) {
+  .watch-list {
+    &-items {
+      justify-content: space-around;
+    }
+  }
+}
