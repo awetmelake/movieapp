@@ -12,6 +12,7 @@
   margin: 0 auto 4em;
   width: 90%;
   min-height: 200px;
+
   h1 {
     text-align: left !important;
     color: black !important;
@@ -31,12 +32,13 @@
   margin: 2em 0;
   text-align: center;
 }
+
 .remove {
   background-color: $redBtn;
   height: 35px;
   padding: 0 !important;
-line-height: 35px;
-border-radius: 2px;
+  line-height: 35px;
+  border-radius: 2px;
 }
 
 .add {
@@ -46,6 +48,7 @@ border-radius: 2px;
   padding: 0 !important;
   border-radius: 2px;
 }
+
 .neutral {
   background-color: $header;
   height: 35px;
@@ -81,61 +84,63 @@ border-radius: 2px;
   color: white;
   height: 600px;
 }
-
 @media screen and (max-width: 900px) {
   .movie-details {
     width: 80%;
-    &-header{
+
+    &-header {
       padding-top: 60px;
     }
+
     &-info {
       grid-template-columns: 1fr;
       width: 100%;
     }
   }
 }
-
 @media screen and (max-width: 600px) {
   .movie-details {
-      width: 95%;
+    width: 95%;
+
     &-info {
       grid-template-columns: 1fr;
+
       img {
         width: 250px;
       }
     }
   }
 }
-
 //movie item display, poster
-
 .movie-poster {
   cursor: pointer;
-  padding: 1em;
-  background-color: $primaryColor;
-  border-radius: 2px;
   transition: all 0.25s;
   opacity: 0.7;
   margin: 0 auto;
+  color: white;
+
   img {
+    border-radius: 5px;
     width: 100%;
   }
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0px 0px 20px black;
     opacity: 1;
   }
 
   .movie-poster-title {
-    text-align: center;
+    text-align: left;
     font-size: 15px;
     font-weight: 600;
+    font-family: Roboto;
+    margin-top: 1em;
   }
 
   .movie-poster-btn {
     margin: 1em auto;
     width: 100%;
+
     img {
       width: 30px;
     }

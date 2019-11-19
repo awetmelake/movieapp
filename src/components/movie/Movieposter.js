@@ -22,8 +22,10 @@ const Movieposter = ({
           onError={e => (e.target.src = noImg)}
         />
 
-        <p className="mt-3 text-center" style={{fontFamily: "Roboto"}}>
-          {movie.Title + " (" + movie.Year + ")"}
+        <p className="movie-poster-title">
+          {movie.Title}
+          <br />
+          {"(" + movie.Year + ")"}
         </p>
       </div>
     </div>
