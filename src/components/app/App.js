@@ -31,7 +31,7 @@ const App = ({ auth, loading }) => {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/watchlist" component={Watchlist} />
-          <Route path="/sign-in" component={SignIn} />
+          <Route path="/log-in" component={SignIn} />
           <Route path="/sign-up" component={SignUp} />
           <Route path="/user-profile/:id" component={UserProfile} />
           <Route path="/search-results/:title" component={Searchresults} />
