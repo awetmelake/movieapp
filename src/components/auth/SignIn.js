@@ -29,7 +29,7 @@ class SignIn extends Component {
         style={{ fontFamily: "Roboto Condensed", marginTop: "100px" }}
       >
         <h1 style={{ fontFamily: "Lexend Deca" }} className="mb-5 text-black">
-          Sign In
+          Log In
         </h1>
 
         <form className="sign-in-form" onSubmit={this.handleSubmit}>
@@ -63,26 +63,27 @@ class SignIn extends Component {
             />
           </div>
 
-          <p className="text-center text-red-500">
-            {authError && authError.message.toUpperCase()}
-          </p>
-
           <div className="text-center py-4">
             <button className="bg-purple-700" type="submit">
-              Sign In
+              Log In
             </button>
           </div>
+
+          <p className="text-center text-red-400">
+            {(authError && authError.message) && authError.message.toUpperCase()}
+            {(authError && !authError.message) && authError.toUpperCase()}
+          </p>
         </form>
 
         <div className="text-center pt-5 flex flex-row justify-around">
           <div>
-            <p className="text-gray-500 pb-1">Just browsing?</p>
+            <p className="text-gray-900 pb-1">Just browsing?</p>
             <button className="bg-purple-700 mx-auto " onClick={guestSignIn}>
               Log in as guest
             </button>
           </div>
           <div>
-            <p className="text-gray-500 pb-1">Don't have an account</p>
+            <p className="text-gray-900 pb-1">Don't have an account</p>
             <Link to="/sign-up">
               <button className="bg-purple-700 mx-auto">Sign up</button>
             </Link>

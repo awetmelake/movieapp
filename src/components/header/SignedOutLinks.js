@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const SignedOutLinks = ({ auth }) => (
   <ul>
     <li>
-      <Link to="/sign-in">SIGN IN</Link>
+      <Link to="/log-in">LOG IN</Link>
     </li>
     <li>
       <Link to="/sign-up">SIGN UP</Link>

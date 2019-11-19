@@ -1,7 +1,8 @@
 @import "../../styles/variables.scss";
 
 .main-nav {
-  @include flex-align-justify(center, space-evenly);
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
   height: 60px;
   background-color: $header;
   color: #f3f3f3;
@@ -10,10 +11,10 @@
   z-index: 10;
   width: 100%;
   transition: position 0.5s;
-  border-bottom: 1px solid grey;
 
   header {
     font-size: 20px;
+    margin: auto;
     a {
       padding: 0.6em;
     }
@@ -25,7 +26,6 @@
     li {
       cursor: pointer;
       color: white;
-      transition: color 0.5s;
       width: fit-content;
       &:hover{
         border-bottom: 3px solid purple;
@@ -102,6 +102,8 @@
     bottom: -60px;
     height: 60px;
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
 
     ul,
     li {
@@ -115,6 +117,7 @@
   .main-nav {
     width: 100%;
     transition: top 0.5s;
+    display: flex;
     header,
     li,
     ul {

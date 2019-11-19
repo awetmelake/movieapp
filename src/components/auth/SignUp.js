@@ -101,7 +101,8 @@ class SignUp extends Component {
           </div>
 
           <p className="text-red-500 text-center">
-            {authError &&  authError.message.toUpperCase()}
+            {(authError && authError.message) && authError.message.toUpperCase()}
+            {(authError && !authError.message) && authError.toUpperCase()}
           </p>
 
           <div className="text-center py-4">
@@ -119,8 +120,8 @@ class SignUp extends Component {
             </div>
             <div>
               <p className="text-gray-500 pb-1">Already have an account?</p>
-              <Link to="/sign-in">
-                <button className="bg-purple-700 mx-auto ">Sign in</button>
+              <Link to="/log-in">
+                <button className="bg-purple-700 mx-auto ">Log in</button>
               </Link>
             </div>
           </div>
