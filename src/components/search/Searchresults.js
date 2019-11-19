@@ -93,10 +93,9 @@ class Searchresults extends Component {
             >
               {pages[page - 1]}
             </div>
-            
+
             <div className="search-results-page-nav-btn">
               <button
-                data-aos="fade-up"
                 value="decrement"
                 onClick={e => this.handlePage(e)}
               >
@@ -104,7 +103,6 @@ class Searchresults extends Component {
               </button>
 
               <button
-                data-aos="fade-up"
                 value="increment"
                 onClick={e => this.handlePage(e)}
               >
