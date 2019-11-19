@@ -38,7 +38,7 @@ class Searchbar extends Component {
           placeholder="search..."
         />
         <Link to={`/search-results/${this.state.search}`}>
-          <button style={{position: 'relative', left: '5px'}} onClick={e => this.handleSubmit()} type="submit" className="rounded-full">
+          <button style={{borderBottomRightRadius: '10px', borderTopRightRadius: '10px'}} onClick={e => this.handleSubmit()} type="submit" className="">
             <img src={searchIcon} alt="" />
           </button>
         </Link>

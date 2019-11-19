@@ -98,6 +98,7 @@ class Searchresults extends Component {
               <button
                 value="decrement"
                 onClick={e => this.handlePage(e)}
+                className="bg-purple-900"
               >
                 LAST
               </button>
@@ -105,6 +106,7 @@ class Searchresults extends Component {
               <button
                 value="increment"
                 onClick={e => this.handlePage(e)}
+                className="bg-purple-900"
               >
                 NEXT
               </button>

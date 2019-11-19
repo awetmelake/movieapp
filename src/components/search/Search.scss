@@ -2,6 +2,7 @@
 
 .search-bar {
   @include flex-align-justify(none, none);
+  margin: auto;
 
   input {
     border: none;
@@ -35,7 +36,7 @@
     color: #f3f3f3;
     text-align: center;
   }
-  margin-top: 60px;
+  margin-top: 30px;
   &-results {
     display: grid;
     justify-content: center;
@@ -57,11 +58,11 @@
     max-width: 300px;
     button {
       font-size: 15px;
-      background-color: $header;
+      // background-color: $secondaryColor;
       width: 130px;
       border-radius: 0;
       outline: none;
-      opacity: 0.8 !important;
+      opacity: 0.9 !important;
 
       &:hover {
         opacity: 1 !important;
@@ -83,10 +84,8 @@
 @media screen and (max-width: 600px) {
   .search-bar {
     input{
-
       width: 180px;
     }
-    // right: 60px;
   }
   .search-results {
     grid-gap: 1em;
