@@ -60,4 +60,4 @@ export const rrfProps = {
 * Node Sass
 
 ## What the app looks like 
-![alt text](https://awettech.com/images/moviedb.webp)
+![alt text](moviedb.webp)
